@@ -24,6 +24,6 @@ jobs:
       - uses: actions/checkout@v2
       - uses: louis70109/line-notify-action@master
         with:
-           token: ${{ secrets.LINE_ACCESS_TOKEN }}
+           token: ${{ secrets.LINE_NOTIFY_TOKEN  }}
            message: 'LINE Notify test message'
 
