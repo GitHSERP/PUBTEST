@@ -24,11 +24,8 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - uses: actions/checkout@v2
-      - uses: raeperd/line-in-action@v1.0
+      - uses: louis70109/line-notify-action@master
         with:
-          token: ${{ secrets.LINE_ACCESS_TOKEN }}
-          message: Action run by ${{ github.actor }}
-          notificationDisabled: false # optional
-          stickerPackageId: 1         # optional
-          stickerId: 2                # optional
+           token: ${{ secrets.LINE_ACCESS_TOKEN }}
+           message: 'LINE Notify test message'
 
