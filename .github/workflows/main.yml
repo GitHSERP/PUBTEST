@@ -23,9 +23,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: snow-actions/line-notify@v1.0.0
-   
-    with:
-      access_token: ${{ secrets.LINE_NOTIFY_TOKEN }}
-      message: 'some message'
+        with:
+          access_token: ${{ secrets.LINE_NOTIFY_TOKEN }}
+          message: 'some message'
 
 
