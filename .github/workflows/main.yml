@@ -17,7 +17,8 @@ on:
 
 jobs:
 
-  build:
+  notify:
+
 
     runs-on: ubuntu-latest
     steps:
