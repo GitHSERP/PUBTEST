@@ -3,7 +3,10 @@ on:
   push:
     branches: [ master ]
   pull_request:
+  
     branches: [ master ]
+    types: [opened, reopened]
+
 
 
   workflow_dispatch:
