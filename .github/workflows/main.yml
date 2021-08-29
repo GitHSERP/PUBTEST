@@ -22,8 +22,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: louis70109/line-notify-action@master
-        with:
-           token: ${{ secrets.LINE_NOTIFY_TOKEN  }}
-           message: 'LINE Notify test message'
+      - uses: snow-actions/line-notify@v1.0.0
+   
+    with:
+      access_token: ${{ secrets.LINE_NOTIFY_TOKEN }}
+      message: 'some message'
+
 
