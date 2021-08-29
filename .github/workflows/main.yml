@@ -24,11 +24,11 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - uses: actions/checkout@v2
-      - uses: ./
+      - uses: raeperd/line-in-action@v1.0
         with:
-          access_token: ${{ secrets.LINE_ACCESS_TOKEN }}
-          message: |
-            Pull request is opened.
-            #${{ github.event.number }}: ${{ github.event.pull_request.title }}
-            ${{ github.event.pull_request.html_url }}
+          token: ${{ secrets.LINE_ACCESS_TOKEN }}
+          message: Action run by ${{ github.actor }}
+          notificationDisabled: false # optional
+          stickerPackageId: 1         # optional
+          stickerId: 2                # optional
 
