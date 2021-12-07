@@ -1,1 +1,1 @@
-git remote add origin git@github.com:GitHSERP/TEST.git
+git remote add origin git@github.com:GitHSERP/PUBTEST.git
