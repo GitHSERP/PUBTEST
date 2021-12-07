@@ -1,0 +1,110 @@
+git 版本控制環境建置
+
+1.為何要用git
+
+
+遠端多人協作
+紀錄工作歷程
+解決版本衝突問題
+
+
+12
+git使用
+
+1.安裝GIT
+2.建立帳密
+ git config --global user.name "a0"
+ git config --global user.email a0@hserp.tw
+
+
+
+
+3.基本指令
+ git init //初始化
+ git add . //加入所有檔案
+ git commit -m '摘要描述' //提交
+ git status //目前狀態
+ git log   //查看紀錄
+ git reset //返回步驟
+-----------
+$ git reset HEAD^            # 回退所有內容到上一個版本  
+$ git reset HEAD^ hello.php  # 回退 hello.php 文件的版本到上一個版本  
+$ git  reset  052e           # 回退到指定版本
+  git reset HEAD^^ --hard  #還原前兩個版本，所有更新檔案都放棄：
+
+git reset ORIG_HEAD #後悔reset
+
+
+git stash //將目前檔案存下
+git stash drop //拋棄上一次存檔
+git stash list 
+
+
+
+
+4.設定遠端git
+
+https://dotblogs.com.tw/kirkchen/2013/04/23/use_ssh_to_interact_with_github_in_windows
+
+
+ ssh-keygen -t rsa -C "a0@hserp.tw"
+ 在c:\users\your_name\.ssh裡面找到public和private key
+ Private Key - id_rsa
+ Public Key - id_rsa.pub
+
+將公鑰貼到github profile seeting SSH key中
+
+
+ git pull //拉回資料
+ git pull= git fetch + git merge
+
+
+
+git remote add origin  git@github.com:a0hserp/WorkFlow.git //加入github 主機
+git remote remove origin //刪除主機
+
+
+git clone git@github.com:a0hserp/WorkFlow.git //複製遠端
+
+git pull 將遠端分支資料拉回並合併本地分支
+
+推至遠端
+$ git push <remote> <local_branch>:<remote_name>
+
+
+5.重頭戲
+-------------------------------------------------------------
+ Git 支線概念講解
+ git branch dev //開分支
+
+
+
+
+參考網址
+---------------------------------------------------------------
+
+
+//詳細學習 請參考六角學院
+https://w3c.hexschool.com/git/cfdbd310
+
+.gitignore 編輯
+線上產生
+https://www.toptal.com/developers/gitignore
+說明
+https://git-scm.com/docs/gitignore
+
+!fileA //為例外
+
+github 發PR須同意
+在你的branch裡面新增一個資料夾.github以及在.github資料夾裡面新增一個檔案CODEOWNERS，
+* Email帳號
+
+
+
+GUI管理工具
+https://www.sourcetreeapp.com/
+
+線上練習
+https://learngitbranching.js.org/?NODEMO=&locale=zh_TW
+
+
